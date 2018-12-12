@@ -1,0 +1,15 @@
+language: node_js
+
+node_js:
+  - 8.12.0
+dist: xenial
+before_script:
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build --debug
+
+script:
+  - yarn run test
+
+after_script:
+- ./cc-test-reporter after-build --debug -t lcov coverage/lcov.info --exit-code $TRAVIS_TEST_RESULT

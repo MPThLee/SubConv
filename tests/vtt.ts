@@ -7,7 +7,7 @@ const vtt = ['WEBVTT', '',
              'our final approach into Coruscant.',
              '',
              '2',
-             '00:02:20.476 --> 00:02:22.501',
+             '00:02:20.476 --> 00:02:22.501 position:90% align:right size:35%',
              'Very good, Lieutenant.', ''].join('\n');
 
 const structure: ISubtitleStructure[] = [{
@@ -20,7 +20,8 @@ const structure: ISubtitleStructure[] = [{
         index: 2,
         start: 140476,
         end: 142501,
-        text: 'Very good, Lieutenant.'
+        text: 'Very good, Lieutenant.',
+        cueSettings: 'position:90% align:right size:35%'
     }];
 
 test('VTT to Internal Structure Test', () => {

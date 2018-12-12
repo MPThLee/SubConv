@@ -1,6 +1,8 @@
 export function parse(timeStamps: string) {
     const regex = /^((?:\d{2,}:)?\d{2}:\d{2}[,.]\d{3}) --> ((?:\d{2,}:)?\d{2}:\d{2}[,.]\d{3})(?: (.*))?$/;
-    const match = regex.exec(timeStamps)!;
+    const match = regex.exec(timeStamps);
+
+    if (!match) throw new Error('Invalid SRT/WebVTT Timestamps: ' + timeStamps);
 
     interface ICue {
         start: number,
@@ -22,7 +24,7 @@ export function toMilliseconds(timeStamp: string) {
     if (!timeStamp) return 0;
 
     const match = timeStamp.match(/^(?:(\d{2,}):)?(\d{2}):(\d{2})[,.](\d{3})$/);
-    if (!match) throw new Error("Invalid SRT/WebVTT Timestamp: " + timeStamp);
+    if (!match) throw new Error('Invalid SRT/WebVTT Timestamp: ' + timeStamp);
 
     const hours = match[1] ? parseInt(match[1], 10) * 3600000 : 0;
     const minutes = parseInt(match[2], 10) * 60000;
@@ -32,12 +34,10 @@ export function toMilliseconds(timeStamp: string) {
 }
 
 export function toSrtTimestamp(msTimestamp: number) {
-    if (isNaN(msTimestamp)) return msTimestamp;
     return _toSrtTimestamp(msTimestamp)
 }
 
 export function toVttTimestamp(msTimestamp: number) {
-    if (isNaN(msTimestamp)) return msTimestamp;
     return _toSrtTimestamp(msTimestamp).replace(',', '.')
 }
 

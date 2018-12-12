@@ -1,5 +1,7 @@
 # Subtitle Converter
-
+[![Build Status](https://travis-ci.org/MPThLee/SubConv.svg?branch=master)](https://travis-ci.org/MPThLee/SubConv)
+[![Maintainability](https://api.codeclimate.com/v1/badges/f1b9185556aee01fd336/maintainability)](https://codeclimate.com/github/MPThLee/SubConv/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/f1b9185556aee01fd336/test_coverage)](https://codeclimate.com/github/MPThLee/SubConv/test_coverage)
 ## What is this?
 Just converting subtitles to different format.
 

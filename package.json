@@ -5,6 +5,8 @@
   "scripts": {
     "type-check": "tsc --noEmit",
     "type-check:watch": "npm run type-check -- --watch",
+    "test": "jest --coverage",
+    "test:watch": "jest --coverage --watch",
     "build": "npm run build:types && npm run build:js",
     "build:types": "tsc --emitDeclarationOnly",
     "build:js": "babel src --out-dir lib --extensions \".ts,.tsx\" --source-maps inline"
@@ -37,6 +39,26 @@
     },
     "testMatch": [
       "**/tests/*.+(ts|tsx|js)"
+    ],
+    "testPathIgnorePatterns" :[
+      "/lib/"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 90,
+        "functions": 95,
+        "lines": 95,
+        "statements": 95
+      }
+    },
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/tests/",
+      "/lib/"
+    ],
+    
+    "collectCoverageFrom": [
+      "src/**/*.{js,ts}"
     ]
-}
+  }
 }

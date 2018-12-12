@@ -9,7 +9,6 @@
 
 import { parse as SRTParse, stringify as SRTStrigify } from './formats/srt'
 import { parse as VTTParse, stringify as VTTStrigify } from './formats/vtt'
-import { parse as TimestampParse, toMilliseconds, toSrtTimestamp, toVttTimestamp } from './utils/timestamp'
 
 export const SRT = {
     parse: SRTParse,
@@ -21,17 +20,11 @@ export const VTT = {
     stringify: VTTStrigify
 }
 
-export const utils = {
-    parse: TimestampParse, 
-    toMilliseconds, 
-    toSrtTimestamp, 
-    toVttTimestamp
-}
+export { default as Utils } from './utils'
 
 export { default as ISubtitleStructure } from './interface'
 
 export default {
     SRT,
-    VTT,
-    utils
+    VTT
 }
