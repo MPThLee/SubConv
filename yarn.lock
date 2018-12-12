@@ -3558,6 +3558,10 @@ strip-json-comments@~2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-2.0.1.tgz#3c531942e908c2697c0ec344858c286c7ca0a60a"
 
+"subsrt@https://github.com/MPThLee/subsrt":
+  version "1.0.0"
+  resolved "https://github.com/MPThLee/subsrt#e9bafd9e8d39de2482b7ed72a0b2474bcd77b237"
+
 supports-color@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-2.0.0.tgz#535d045ce6b6363fa40117084629995e9df324c7"

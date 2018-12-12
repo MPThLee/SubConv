@@ -37,10 +37,13 @@
         "tsConfigFile": "tsconfig.json"
       }
     },
+    "moduleNameMapper": {
+      "^@extern/(.*)": "<rootDir>/extern/$1"
+    },
     "testMatch": [
       "**/tests/*.+(ts|tsx|js)"
     ],
-    "testPathIgnorePatterns" :[
+    "testPathIgnorePatterns": [
       "/lib/"
     ],
     "coverageThreshold": {
@@ -56,9 +59,11 @@
       "/tests/",
       "/lib/"
     ],
-    
     "collectCoverageFrom": [
       "src/**/*.{js,ts}"
     ]
+  },
+  "dependencies": {
+    "subsrt": "https://github.com/MPThLee/subsrt"
   }
 }
