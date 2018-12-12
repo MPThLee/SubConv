@@ -2,6 +2,7 @@
 [![Build Status](https://travis-ci.org/MPThLee/SubConv.svg?branch=master)](https://travis-ci.org/MPThLee/SubConv)
 [![Maintainability](https://api.codeclimate.com/v1/badges/f1b9185556aee01fd336/maintainability)](https://codeclimate.com/github/MPThLee/SubConv/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/f1b9185556aee01fd336/test_coverage)](https://codeclimate.com/github/MPThLee/SubConv/test_coverage)
+[![Coverage Status](https://coveralls.io/repos/github/MPThLee/SubConv/badge.svg)](https://coveralls.io/github/MPThLee/SubConv)
 ## What is this?
 Just converting subtitles to different format.
 

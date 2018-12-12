@@ -13,3 +13,4 @@ script:
 
 after_script:
 - ./cc-test-reporter after-build --debug -t lcov coverage/lcov.info --exit-code $TRAVIS_TEST_RESULT
+- npm run coveralls
